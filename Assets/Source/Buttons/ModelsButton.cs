@@ -14,33 +14,31 @@ public class ModelsButton : MonoBehaviour {
         switch (state)
         {
             case 8:
-                print("Why hello there good sir! Let me teach you about Trigonometry!");
+                DisableAll();
                 break;
             case 7:
-                print("Why hello there good sir! Let me teach you about Trigonometry!");
+                DisableAll();
                 break;
             case 6:
-                print("Why hello there good sir! Let me teach you about Trigonometry!");
+                DisableAll();
                 break;
             case 5:
-                print("Why hello there good sir! Let me teach you about Trigonometry!");
+                DisableAll();
                 break;
             case 4:
-                print("Hello and good day!");
+                DisableAll();
+                multipleDental.SetActive(true);
                 break;
             case 3:
                 DisableAll();
-
-                print("Whadya want?");
+                dental.SetActive(true);
+                scrollView.SetActive(true);
                 break;
             case 2:
-                print("Grog SMASH!");
                 break;
             case 1:
-                print("Ulg, glib, Pblblblblb");
                 break;
             default:
-                print("Incorrect intelligence level.");
                 break;
         }
     }
