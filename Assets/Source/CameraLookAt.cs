@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
+using UnityEngine.UI;
 
 public class CameraLookAt : MonoBehaviour
 {
-
+    public UnityEngine.UI.Image[] popups;
+    public ScrollView hideable;
     public Transform target;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
@@ -15,7 +18,6 @@ public class CameraLookAt : MonoBehaviour
     public float zoomSpeed = 5;
 
     private bool zoomed = false;
-    
 
     private void Start()
     {
@@ -59,6 +61,7 @@ public class CameraLookAt : MonoBehaviour
         {
             target.position = new Vector3(t.position.x + 10, t.position.y + 3, t.position.z);
             zoomed = true;
+
         }
         else
             ResetPosition();
