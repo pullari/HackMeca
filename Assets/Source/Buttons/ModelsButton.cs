@@ -8,6 +8,13 @@ public class ModelsButton : MonoBehaviour {
     public GameObject dental;
     public GameObject multipleDental;
 
+    CameraLookAt camlook;
+
+
+    void Start()
+    {
+        camlook = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraLookAt>();
+    }
 
     public void SetState(int state)
     {
@@ -46,6 +53,8 @@ public class ModelsButton : MonoBehaviour {
 
     public void DisableAll()
     {
+        camlook.ResetPosition();
+
         scrollView.SetActive(false);
         dental.SetActive(false);
         multipleDental.SetActive(false);
