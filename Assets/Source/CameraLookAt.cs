@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CameraLookAt : MonoBehaviour
 {
     public UnityEngine.UI.Image[] popups;
-    public ScrollView hideable;
+    public GameObject hideable;
     public Transform target;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
@@ -35,6 +35,7 @@ public class CameraLookAt : MonoBehaviour
                 transform.position = Vector3.Lerp(originalPosition, new Vector3(transform.position.x, transform.position.y, zoomDist), t);
             }
             transform.LookAt(target);
+            
         } else if (transform.position.z > originalPosition.z)
         {
             t += zoomSpeed * Time.deltaTime;
@@ -45,7 +46,14 @@ public class CameraLookAt : MonoBehaviour
         }
 
         if (Input.GetMouseButtonDown(1) && zoomed)
+        {
             ResetPosition();
+            hideable.SetActive(true);
+            for (int i = 0; i < 3; i++)
+            {
+                popups[i].gameObject.SetActive(false);
+            }
+        } 
     }
 
     public void ResetPosition()
@@ -62,9 +70,22 @@ public class CameraLookAt : MonoBehaviour
             target.position = new Vector3(t.position.x + 10, t.position.y + 3, t.position.z);
             zoomed = true;
 
+            hideable.SetActive(false);
+            int show = Random.Range(0, 2);
+            for (int i = 0; i < 3; i++)
+            {
+                popups[i].gameObject.SetActive(i == show);
+            }
         }
         else
+        {
             ResetPosition();
+            hideable.SetActive(true);
+            for (int i = 0; i < 3; i++)
+            {
+                popups[i].gameObject.SetActive(false);
+            }
+        }
     }
 }
 
