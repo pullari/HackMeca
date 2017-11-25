@@ -38,9 +38,8 @@ public class CameraLookAt : MonoBehaviour
             t += zoomSpeed * Time.deltaTime;
             transform.position = Vector3.Lerp(new Vector3(transform.position.x, transform.position.y, zoomDist), originalPosition, t);
             transform.rotation = Quaternion.Lerp(zoomRot, originalRotation, t);
-        } else
-        {
-            t = 0;
+            if (t >= 1)
+                t = 0;
         }
 
         if (Input.GetMouseButtonDown(1) && zoomed)
@@ -58,7 +57,7 @@ public class CameraLookAt : MonoBehaviour
     {
         if (!zoomed)
         {
-            target.position = new Vector3(t.position.x + 10, t.position.y + 5, t.position.z);
+            target.position = new Vector3(t.position.x + 10, t.position.y + 3, t.position.z);
             zoomed = true;
         }
         else
