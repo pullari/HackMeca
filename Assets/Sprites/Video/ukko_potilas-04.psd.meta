@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7733a53c56cbbd944984cbf9705769bc
-timeCreated: 1511648407
+timeCreated: 1511656566
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,7 @@ TextureImporter:
     21300014: ukko_potilas-04_7
     21300016: ukko_potilas-04_8
     21300018: ukko_potilas-04_9
+    21300020: ukko_potilas-04_10
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -111,6 +112,42 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Tizen
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Samsung TV
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -179,7 +216,7 @@ TextureImporter:
         width: 934
         height: 1808
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,7 +230,7 @@ TextureImporter:
         width: 288
         height: 472
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,7 +244,7 @@ TextureImporter:
         width: 707
         height: 1144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -250,6 +287,20 @@ TextureImporter:
         height: 463
       alignment: 9
       pivot: {x: 0.834218, y: 0.952602}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ukko_potilas-04_10
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 3630
+        width: 1114
+        height: 1195
+      alignment: 9
+      pivot: {x: 0.5098017, y: 0.10710745}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
