@@ -15,6 +15,6 @@ public class Tooth : MonoBehaviour {
 
     void OnMouseDown()
     {
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraLookAt>().SetTarget(this.transform);
+        Camera.main.GetComponent<CameraLookAt>().SetTarget(this.transform);
     }
 }

@@ -20,7 +20,7 @@ public class ModelsButton : MonoBehaviour {
 
     void Start()
     {
-        camlook = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraLookAt>();
+        camlook = Camera.main.GetComponent<CameraLookAt>();
     }
 
     public void SetState(int state)
